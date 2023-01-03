@@ -4,6 +4,9 @@
     outline: 0;
     font-family: "Raleway";
 }
+.container {
+    overflow-x: hidden;
+}
 .header{
     background-color: #636C79;
     height: 100%;
@@ -264,16 +267,28 @@ input {
     margin-top: 100px;
 }
 .footer-head{
+    display: flex;
+    justify-content: space-between;
     width: 80%;
     margin-left: 140px;
     padding-top: 80px;
     padding-bottom: 50px;
     border-bottom: 1px solid #ffffff;
 }
-.social-icons{
-    float: right;
-    border-radius: 10px;
-}
+.footer-head .social-icons {
+    background-color: #10181d;
+    display: flex;
+  }
+  .footer-head .social-icons i {
+    margin-left: 50px;
+    cursor: pointer;
+  }
+  .footer-head .social-icons .fa-brands {
+    background-color: #282f34;
+    padding: 15px 15px;
+    border-radius: 50%;
+    color: white;
+  }
 .all-list{
     margin-top: 60px;
     display: flex;
@@ -289,7 +304,9 @@ input {
 }
 
 @media screen and (max-width : 900px) {
-    
+    .container {
+        padding: auto;
+    }
     .header{
         background-color: #636C79;
         height: 100%;
@@ -575,12 +592,18 @@ input {
     }
     .page7{        
         margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
     .footer-head{
-        width: 80%;
+        display: flex;
+        flex-direction: column;
         margin-left: 0px;
         padding-top: 30px;
         border-bottom: 0px ;
+        gap: 30px;
     }
     .footer-head .bottom-logo {
         display: flex;
@@ -588,18 +611,25 @@ input {
         align-items: center;
         text-align: center;
         margin: auto;
-        margin-left: 130px;
     }
-    .social-icons{
+    .footer-head .social-icons {
+        background-color: #10181d;
         display: flex;
+        justify-content: space-around;
+      }
+      .footer-head .social-icons i {
         justify-content: center;
-        align-items: center;
-        border-radius: 10px;
-        margin-top: 20px;
-        width: 65%;
-    }
+        margin-left: 0px;
+        cursor: pointer;
+      }
+      .footer-head .social-icons .fa-brands {
+        background-color: #282f34;
+        padding: 15px 15px;
+        border-radius: 50%;
+        color: white;
+      }
     .all-list{
-        margin-top: 60px;
+        margin-top: 10px;
         display: flex;
         flex-direction: column;
     }    
